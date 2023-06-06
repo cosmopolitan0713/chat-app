@@ -4,7 +4,7 @@
       <a href="#">Tom</a>
     </div>
     <div class="side-right">
-      <a href="#">チャットを作成する</a>
+      <%= link_to current_user.name, edit_user_path(current_user) %>
     </div>
   </div>
   <div class="side-bottoms">
