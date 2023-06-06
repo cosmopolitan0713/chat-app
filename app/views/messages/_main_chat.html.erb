@@ -51,14 +51,14 @@
   </div>
     
     
-    <div class="main-bottom">
+    <%= form_with model: [@room, @message], class: 'main-bottom', local: true do |f| %>
       <div class="form-input">
-        <input class="form-messages" placeholder= "type a messages">
+        <%= f.text_field :content, class: 'form-messages', placeholder: 'type a messages' %>
         <label class="form-image">
           <span class="image-file">画像</span>
-          <input type="file" class="hidden">
+          <%= f.file_field :image,  class: "hidden" %>
         </label>
       </div>
-      <input class="form-submit" type="submit" value="送信">
-    </div>
+      <%= f.submit '送信', class: "form-submit" %>
+    <% end %>    
 </div>
